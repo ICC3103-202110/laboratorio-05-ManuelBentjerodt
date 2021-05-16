@@ -30,21 +30,19 @@ function getTable(model){
 }
 
 function inputForm(model){
-    const {input} = model;
-    const messageBill = "Bill Amount?";
-    const messageTip = "Tip(%)?";
+    const {billAmount,percentage} = model
     return inquirer.prompt([
         {
-            name: 'input',
-            type: 'input',
-            message: messageBill,
-            default: input,  
+            name: "billAmount",
+            type: "number",
+            message: "Bill Amount?",
+            default:  billAmount
         },
         {
-            name: "input",
-            type: "input",
-            message: messageTip,
-            default: input,
+            name: "billTip",
+            type: "number",
+            message: "Tip(%)?",
+            default: percentage
         }
     ])
 }

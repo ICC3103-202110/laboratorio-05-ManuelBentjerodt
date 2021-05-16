@@ -8,4 +8,4 @@ const state = {
     currentView: view(initModel)
 }
 
-app(state, true, view);
+app(state, update, view);
