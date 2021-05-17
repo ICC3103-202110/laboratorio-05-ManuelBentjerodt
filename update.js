@@ -3,8 +3,8 @@
 function update(input,model){
     return {
         billAmount: input["billAmount"],
-        tip: input["percentage"],
-        percentage: input["billAmount"]*input["percentage"]/100,
+        tip: input["billAmount"]*input["percentage"]/100,
+        percentage: input["percentage"],
         total: (input["billAmount"]*(1+input["percentage"]/100)).toFixed(3) //toFixed(3) we round to the third decimal, for some cases
     }
 }
